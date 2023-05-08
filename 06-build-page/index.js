@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-let index;
 const objTags = [];
-
+let index;
 // создание папки project-dist
 async function createFolder() {
   fs.promises
@@ -83,7 +82,7 @@ async function createCss() {
                 if (err) throw err;
               }
             );
-            console.log('append CSS');
+            console.log('Append CSS');
           })
           .catch(function (error) {
             console.log(error);
@@ -101,7 +100,7 @@ async function removeAssets() {
     recursive: true,
     force: true,
   });
-  console.log('reset assets');
+  console.log('Reset assets');
 }
 
 // создание папки assets
@@ -112,7 +111,7 @@ async function folderPreparation() {
       force: true,
     })
     .then(() => {
-      console.log('create folder assets');
+      console.log('Create folder assets');
     })
     .catch(() => {
       console.log('Failed to create directory');
