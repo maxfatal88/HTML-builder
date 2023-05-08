@@ -15,17 +15,17 @@ let text = '';
 stdin.on('data', data => {
   text = data.toString().trim();
   if(text === 'exit') {
-    stdout.write('Goodbuy\n');
+    stdout.write('Buy\n');
     process.exit();
   }
   fs.appendFile(
     textFile,
-    text,
+    text + '\n',
     err => {
       if (err) throw err;
     }
   );});
 process.on('SIGINT', () => {
-  stdout.write('Goodbuy\n');
+  stdout.write('Buy\n');
   process.exit();
 });
