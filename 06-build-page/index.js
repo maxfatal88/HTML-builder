@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const objTags = [];
 let index;
+
 // создание папки project-dist
 async function createFolder() {
   fs.promises

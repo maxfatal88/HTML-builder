@@ -13,7 +13,7 @@ async function readInfo() {
         );
         const fileName = file.name.split('.')[0];
         const fileExtension = path.extname(file.name).split('.')[1];
-        const fileSize = (stats.size / 1024).toFixed(3) + 'kb';
+        const fileSize = stats.size + 'byte';
         console.log(`${fileName}-${fileExtension}-${fileSize}`);
       })();
     }

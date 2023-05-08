@@ -15,7 +15,7 @@ let text = '';
 stdin.on('data', data => {
   text = data.toString().trim();
   if(text === 'exit') {
-    stdout.write('Buy\n');
+    stdout.write('Приложение завершило работу\n');
     process.exit();
   }
   fs.appendFile(
@@ -26,6 +26,6 @@ stdin.on('data', data => {
     }
   );});
 process.on('SIGINT', () => {
-  stdout.write('Buy\n');
+  stdout.write('Приложение завершило работу\n');
   process.exit();
 });
